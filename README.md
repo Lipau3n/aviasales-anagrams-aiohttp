@@ -5,6 +5,8 @@ Run all containers in daemon mode:
 docker-compose up -d
 ```  
 
+*Note: after containers down all anagrams will be removed*
+
 ## Unit tests
 ```
 docker-compose exec web python -m unittest app/tests.py
