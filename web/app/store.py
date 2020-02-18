@@ -26,13 +26,8 @@ class Store:
         :param word: word string
         :return: None or list of anagrams
         """
-        word = word.lower()
-        store = list(filter(lambda x: len(x) == len(word), self.words))
-        anagrams = []
-        sorted_word = sorted(word)
-        for w in store:
-            if sorted_word == sorted(w):
-                anagrams.append(w)
+        word = sorted(word.lower())
+        anagrams = list(filter(lambda x: sorted(x) == word, self.words))
         return anagrams or None
 
 
